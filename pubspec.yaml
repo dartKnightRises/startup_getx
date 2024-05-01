@@ -1,0 +1,29 @@
+name: startup_getx
+description: "This application serves as an excellent starting point for developing mid-level complex Flutter apps, offering a robust architecture and leveraging the efficient state management technique of GetX."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  get: ^4.6.6
+  shared_preferences: ^2.2.3
+  google_fonts: ^6.2.1
+  flutter_native_splash: ^2.3.10
+  internet_connection_checker: ^1.0.0+1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+flutter:
+  uses-material-design: true
+
+
+
