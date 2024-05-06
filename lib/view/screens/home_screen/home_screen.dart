@@ -1,5 +1,4 @@
 import 'package:startup_getx/common_libs.dart';
-import '../../../controller/logic/app_logic.dart';
 import '../../../flavor/env.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -53,6 +52,10 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
+      floatingActionButton: FloatingActionButton(onPressed: ()async {
+        await Get.find<AppLogic>().toggleBrightnessMode();
+      },
+        child: const Icon(Icons.lightbulb),),
           )
         : const Scaffold(
             body: Center(

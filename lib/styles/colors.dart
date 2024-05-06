@@ -18,14 +18,10 @@ class AppColors {
   final Color appDarkCharcoalPrimary = const Color(0xff1f282e);
   final Color appGreyTertiary = const Color(0xffd3d3d3);
 
-
   // Flavor color
   final Color devBanner = Colors.green;
   final Color sitBanner = Colors.amber;
   final Color prodBanner = Colors.red;
-
-
-
 
   // final bool isDark = false;
 
