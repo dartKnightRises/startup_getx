@@ -21,17 +21,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final AppLogic appLogic = Get.find();
-    return
-      Obx(() => GetMaterialApp(
+   return
+      Obx(() {
+        // now dynamic theme is working.
+        final appLogic = Get.find<AppLogic>();
+        final currentTheme = appLogic.isDarkModeCustom.value?$styles.colors.darkTheme:$styles.colors.lightTheme;
+         return GetMaterialApp(
+        theme: currentTheme,
+        darkTheme: currentTheme,
         debugShowCheckedModeBanner: false,
         title: 'Environment Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
         themeMode:appLogic.isDarkModeCustom.value ? ThemeMode.dark : ThemeMode.light,
-        initialRoute: appLogic.isFirstTime.value?Routes.onboardingScreen:Routes.homeScreen,
+        initialRoute: Routes.homeScreen,
         getPages: getPages,
-      ));
+      );});
   }
 }
